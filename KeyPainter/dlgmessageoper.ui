@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dlgmessageoper</class>
+ <widget class="QDialog" name="dlgmessageoper">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>494</width>
+    <height>204</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Button Operation</string>
+  </property>
+  <widget class="QComboBox" name="cmbMessage">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>21</y>
+     <width>211</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>no message</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>send event </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>call function</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>call function(cmd,val,data)</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Run Executable</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="cmbChange">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>60</y>
+     <width>211</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>no</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>change keypad</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>return keypad</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>delete keypad</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>hide keypad</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="cmbEvent">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>100</y>
+     <width>211</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>mouse process - down</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>mouse process - up</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="btnOk">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>140</y>
+     <width>101</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>ok</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnCancel">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>140</y>
+     <width>101</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>cancel</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="edFunction">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>20</y>
+     <width>211</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="maxLength">
+    <number>14</number>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="edKeypad">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>60</y>
+     <width>211</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="maxLength">
+    <number>14</number>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,173 @@
+-----------------------------
+PAD
+-----------------------------
+  Gradient Background
+  position of each color  0-100
+-----------------------------
+
+
+
+-----------------------------
+BUTTONS
+-----------------------------
+"Fill Rect Button"
+/* * * * * * * * * * * * * *
+ * Button Styles
+ *
+ *  attr2:   Qt::BrushStyle
+ *  ---------------
+ *
+ * * * * * * * * * * * * * */
+
+
+
+"3D Rect Button"
+/* * * * * * * * * * * * * *
+ * Button Styles
+ *
+ *  color[1]:   up+left line
+ *  ---------------
+ *  color[2]:   down+right line
+ *
+ * * * * * * * * * * * * * */
+
+
+
+"Round Rect Button"
+/* * * * * * * * * * * * * *
+ * Button Styles
+ *
+ *
+ *  attr1:   round the corners
+ *  ---------------
+ *  attr2:   Qt::BrushStyle
+ *  ---------------
+ *  attr3:   Qt::PenStyle
+ *  ---------------
+ *  attr4:   line width
+ *
+ * * * * * * * * * * * * * */
+
+
+
+"Eliptic Button"
+/* * * * * * * * * * * * * *
+ * Button Styles
+ *
+ *
+ *  attr2:   Qt::BrushStyle
+ *  ---------------
+ *  attr3:   Qt::PenStyle
+ *  ---------------
+ *  attr4:   line width
+ *
+ * * * * * * * * * * * * * */
+
+
+
+"Gradient Button"
+/* * * * * * * * * * * * * *
+ * Gradient design button
+ *
+   attr1:   draw direction  (bit 1-4)
+   ----------------
+   0001  x1=go left
+   0010  y1=go down
+   0100  x2=go right
+   1000  y2=go down
+
+   attr1:   color up/midle/down  (bit 5-6)
+   ----------------
+   0000.0000  color[0]/color[1]/color[2] (text has the upper color)
+   0011.0000  color[2]/color[1]/color[0] (text has the down color)
+   0010.0000  color[2]/color[1]/color[2] (text has free color)
+
+   attr2:   midle point posittion  (n=0-100)
+   ----------------
+   000/2 = 0.0 midle point go up
+   050/2 = 0.5 midle point go midle
+   100/2 = 1.0 midle point go down
+* * * * * * * * * * * * * * */
+
+
+
+"Gradient Radial Button"
+/* * * * * * * * * * * * * *
+ * RadialGradient design button
+ *
+ *
+ *  attr1:   radial of the circle  (n*2)
+ *  ---------------
+ *  attr2:   focus (-/+)x point in the circle  (n*2)
+ *  ---------------
+ *  attr3:   focus (-/+)y point in the circle  (n*2)
+ *
+ *
+ * * * * * * * * * * * * * */
+
+
+
+"Midle Button Degrade"
+*  color[1]: ini color value
+*  color[2]: end color value
+*  attr1:    Midle y point in persentage of 100%
+*            This where in y or x the color2 will be (100%=cy 50%=cy/2)
+*            The negative goes from color1 to color2 to color1 > y-2y-cy (degrate faster or slower scale at 2y-cy to meet the color 1 at cy)
+*            The positive goes from color1 to color2 to colorX > y-2y-cy (degrate the same scale at 2y-cy, ending whatever color is in cy, only if 2y=cy/2 endup the color1)
+*  attr2:    Direction of degradetion  0=vertical 1=horizontal
+
+
+
+"Down Degrade Button"
+*  color[1]: start value of each color
+*  color[2]: degration value of each color
+
+
+
+
+
+**************************************************************
+Qt5.12 Added presets for QGradient based on https://webgradients.com/
+αυτόματη τοποθέτηση όλων των QGradient::Preset σε KeyBar.kpd
+
+for(int i=0; i<kpd.nKeys-1; i++)
+{
+    /*
+     * εδώ έχω σημειώσει ποια νούμερα δεν υπάρχουν στο Qt Preset enumarator !
+     *
+    enum Preset {
+        SaintPetersburg = 27,
+        StarWine = 39,
+        HappyAcid = 40,
+        ShyRainbow = 45,
+        AquaSplash = 71,
+        LoveKiss = 74,
+        Crystalline = 105,
+        FrozenBerry = 111,
+        DenseWater = 119,
+        HappyUnicorn = 130,
+        GlassWater = 135,
+        MoleHall = 141,
+    };
+    */
+
+    pkey[i].attr2 = 0;
+    strcpy(pkey[i].text,"no");
+
+    if(i+1==27) continue;
+    if(i+1==39) continue;
+    if(i+1==40) continue;
+    if(i+1==45) continue;
+    if(i+1==71) continue;
+    if(i+1==74) continue;
+    if(i+1==105) continue;
+    if(i+1==111) continue;
+    if(i+1==119) continue;
+    if(i+1==130) continue;
+    if(i+1==135) continue;
+    if(i+1==141) continue;
+
+    sprintf(pkey[i].text,"%d",i+1);
+    pkey[i].attr2 = 51+i;
+}
+**************************************************************
